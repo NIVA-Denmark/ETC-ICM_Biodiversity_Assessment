@@ -3,44 +3,8 @@ library(shiny)
 library(readr)
 library(ggplot2)
 source('assessment.R')
+source('javascript.R')
 
-script <- "$('#QEtable tbody tr td:nth-last-child(2)').each(function() {
-var cellValue = $(this).text().trim();
-if (cellValue > 10) {
-$(this).css('background-color', 'rgb(255, 102, 0)');
-}
-else if (cellValue > 5) {
-$(this).css('background-color', 'rgb(255, 153, 51)');
-}
-else if (cellValue > 1) {
-$(this).css('background-color', 'rgb(255,255,102)');
-}
-else if (cellValue > 0.5) {
-$(this).css('background-color', 'rgb(102,255,102');
-}
-else if (cellValue > 0) {
-$(this).css('background-color', 'rgb(51,153,255)');
-}
-});
-$('#QEtable tbody tr td:last-child').each(function() {
-var cellValue = $(this).text().trim();
-if (cellValue == 'Bad') {
-$(this).css('background-color', 'rgb(255, 102, 0)');
-}
-else if (cellValue == 'Poor') {
-$(this).css('background-color', 'rgb(255, 153, 51)');
-}
-else if (cellValue == 'Moderate') {
-$(this).css('background-color', 'rgb(255,255,102)');
-}
-else if (cellValue == 'Good') {
-$(this).css('background-color', 'rgb(102,255,102');
-}
-else if (cellValue == 'High') {
-$(this).css('background-color', 'rgb(51,153,255)');
-}
-});
-"
 
 #== 'Moderate'
 ui <- fluidPage(
@@ -49,7 +13,8 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
       fileInput('datafile', 'Choose input file'),
-      selectInput('sepname','Column Separator:',c("Comma","Semi-colon","Tab")),
+      #selectInput('sepname','Column Separator:',c("Comma","Semi-colon","Tab")),
+      selectInput('sepname','Column Separator:',c("Semi-colon","Comma","Tab")),
       withTags({
         div(class="header", checked=NA,
             h4("Instructions"),
@@ -62,7 +27,7 @@ ui <- fluidPage(
               li("Threshold"),
               li("Status"),
               li("Reference"),
-              li("Worst")
+              li("Bad")
             ),
             p("The following column is optional:"),
             ul(
@@ -94,8 +59,12 @@ ui <- fluidPage(
   mainPanel(
     tabsetPanel(
       tabPanel("Data", tableOutput("InDatatable")),
-      tabPanel("Results", 
-               uiOutput("Test1"),plotOutput("plot"))   
+      tabPanel("Indicators", 
+               uiOutput("Indicators"),plotOutput("plot1")),  
+      tabPanel("Categories", 
+               uiOutput("Categories2")),  
+      tabPanel("Assessment Units", 
+               uiOutput("AssessmentUnits"))   
     ) # tabset panel
   )
   )  
@@ -135,21 +104,28 @@ server <- function(input, output, session) {
   InData <- reactive({
     df<-filedata()
     if (is.null(df)){return(NULL)} 
-    out<-filedata()#Assessment(df)     #Individual indicator results
+    out<-Assessment(df,1)    #Individual indicator results
     return(out)
   })
-  QEdata <- reactive({
+  Indicators <- reactive({
     df<-filedata()
     if (is.null(df)){return(NULL)} 
-    out<-Assessment(df,3)     #Quality Element results
+    out<-Assessment(df,2)
     return(out)
   })
-  QEspr <- reactive({
+  Categories <- reactive({
     df<-filedata()
     if (is.null(df)){return(NULL)} 
-    out<-Assessment(df,2)     #QE Results transposed
+    out<-Assessment(df,3)
     return(out)
   })
+  AssessmentUnits <- reactive({
+    df<-filedata()
+    if (is.null(df)){return(NULL)} 
+    out<-Assessment(df,4)
+    return(out)
+  })
+  
   
   CHASEplot<- reactive({
     QE<-QEdata()
@@ -189,13 +165,18 @@ server <- function(input, output, session) {
     return(p)
   })
   
-  output$InDatatable <- renderTable({return(InData())})
+  
+  output$InDatatable <- renderTable({return(InData())},na="")
+  output$Indicators<- renderTable({return(Indicators())},na="")
+  output$Categories<- renderTable({return(Categories())},na="")
+  output$AssessmentUnits<- renderTable({return(AssessmentUnits())},na="")
+  
   output$plot <- renderPlot({return(CHASEplot())})
   output$QEtable <- renderTable({return(QEspr())})
-  output$Test1 <- renderUI({
+  output$Categories2 <- renderUI({
     list(
       tags$head(tags$script(HTML('Shiny.addCustomMessageHandler("jsCode", function(message) { eval(message.value); });')))
-      , tableOutput("QEtable")
+      , tableOutput("Categories")
     )})
 }
 
