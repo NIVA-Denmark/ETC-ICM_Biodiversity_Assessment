@@ -1,7 +1,8 @@
 rm(list = ls())
 library(shiny)
+library(readr)
 library(ggplot2)
-#source('CHASE.R')
+source('assessment.R')
 
 script <- "$('#QEtable tbody tr td:nth-last-child(2)').each(function() {
 var cellValue = $(this).text().trim();
@@ -44,30 +45,31 @@ $(this).css('background-color', 'rgb(51,153,255)');
 #== 'Moderate'
 ui <- fluidPage(
   
-  titlePanel("CHASE Tool"),
+  titlePanel("ETC-ICM Biodiversity Assessment"),
   sidebarLayout(
     sidebarPanel(
       fileInput('datafile', 'Choose input file'),
+      selectInput('sepname','Column Separator:',c("Comma","Semi-colon","Tab")),
       withTags({
         div(class="header", checked=NA,
             h4("Instructions"),
             p("Select the file containing input data for the CHASE assessment.
-              The file must be in text format with columns separated by semi-colons.
+              The file must be in text format. 
               Column headers must be included. The required columns are:"),
             ul(
-              li("Matrix"),
-              li("Substance"),
+              li("Category"),
+              li("Indicator"),
               li("Threshold"),
-              li("Status")
+              li("Status"),
+              li("Reference"),
+              li("Worst")
             ),
-            p("The following columns are optional:"),
+            p("The following column is optional:"),
             ul(
-              li("Waterbody"),
-              li("Response (1 or -1)")
+              li("SpatialAssessmentUnit")
             ),
-            p("The assesssment is made per waterbody. If no waterbody is specified, all indicators are combined in a single assessment."),
-            p("Response=1 (default): status worsens with increasing indicator value. Response=-1: status improves with increasing indicator value"),
-            p("Example data can be found here:", HTML("<a href='data/CHASE_example_DK.txt' target='_blank'>CHASE_example_DK.txt</a>"))
+            p("The assesssment is made per Spatial Assessment Unit. If no Spatial Assessment Unit is specified, all indicators are combined in a single assessment."),
+            p("See detailed instructions here:", HTML("<a href='data/ETC-ICM Biodiversity Assessment.pdf' target='_blank'>ETC-ICM Biodiversity Assessment.pdf</a>"))
             )
         
       }),
@@ -109,14 +111,6 @@ server <- function(input, output, session) {
   
   
   addResourcePath("data","./data/")
-  #examplefile<-'CHASE_example.txt'
-  #output$downloadData <- downloadHandler(
-  #  filename = c(examplefile),
-  #  content = function(file) {
-  #    examplefile
-  #  }
-  #)
-  
   
   #This function is repsonsible for loading in the selected file
   filedata <- reactive({
@@ -125,15 +119,23 @@ server <- function(input, output, session) {
       # User has not uploaded a file yet
       return(NULL)
     }
-    #filedata<-read.csv(infile$datapath,  sep=";", encoding = "UTF-8", fileEncoding = 'ISO8859-1')
-    filedata<-read.csv(infile$datapath,  sep=";")
+    
+    sepchar<-","
+    if(input$sepname=="Semi-colon"){sepchar<-";"}
+    if(input$sepname=="Tab"){sepchar<-"\t"}
+    
+    dfencode<-guess_encoding(infile$datapath,n_max=-1)
+    cat(paste0(dfencode$encoding[1],"\n"))
+    filedata<-read.table(infile$datapath, sep=sepchar,
+                         encoding=dfencode$encoding[1], header=T, stringsAsFactors=F)
+
     return(filedata)
   })
   
   InData <- reactive({
     df<-filedata()
     if (is.null(df)){return(NULL)} 
-    out<-Assessment(df)     #Individual indicator results
+    out<-filedata()#Assessment(df)     #Individual indicator results
     return(out)
   })
   QEdata <- reactive({
