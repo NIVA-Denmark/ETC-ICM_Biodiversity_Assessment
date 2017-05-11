@@ -89,10 +89,10 @@ server <- function(input, output, session) {
     
     dfencode<-guess_encoding(infile$datapath,n_max=-1)
     cat(paste0(dfencode$encoding[1],"\n"))
-    # filedata<-read.table(infile$datapath, sep=sepchar(),
-    #                      header=T, stringsAsFactors=F)
      filedata<-read.table(infile$datapath, sep=sepchar(),
-                          encoding=dfencode$encoding[1], header=T, stringsAsFactors=F)
+                          header=T, stringsAsFactors=F,encoding="UTF-8")
+     #filedata<-read.table(infile$datapath, sep=sepchar(),
+     #                     encoding=dfencode$encoding[1], header=T, stringsAsFactors=F)
     
     return(filedata)
   })
