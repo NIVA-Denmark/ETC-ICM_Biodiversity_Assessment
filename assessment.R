@@ -35,6 +35,8 @@ Assessment<- function(assessmentdata,summarylevel=1){
     }
   }
   
+  
+  
   n<-sum(ok, na.rm = TRUE)
   
   if(n<nreq){
@@ -47,12 +49,9 @@ Assessment<- function(assessmentdata,summarylevel=1){
     }
     if(summarylevel==1){
       return(assessmentdata)
-    }else{
-      return(NA)
-    }
+    }else{    return(NA)}
   }else{
     # The required columns are present - do the assessment
-    
     for(j in 1:nextra){
       if(okextra[j]==0){
         if(extracols[j]=="SpatialAssessmentUnit"){
@@ -61,7 +60,8 @@ Assessment<- function(assessmentdata,summarylevel=1){
           assessmentdata[[extracols[j]]]<-1
         }
       }
-    }    
+    }
+    
     assessmentdata$Category<-gsub("(?<=\\b)([a-z])", "\\U\\1", tolower(assessmentdata$Category), perl=TRUE)
     
     # Change order of category factors
@@ -89,10 +89,8 @@ Assessment<- function(assessmentdata,summarylevel=1){
     
     QEdata<-summarise(group_by(assessmentdata,SpatialAssessmentUnit,Category),
                       IndCount=n(),EQR=mean(EQR,na.rm = TRUE))
-    
-    QEspr<-QEdata %>%
-      select(-c(IndCount)) %>%
-      spread(Category,EQR)
+
+    QEspr<-spread(QEdata,Category,EQR)
     
     QEdata$CategoryClass<-EQRStatus(QEdata$EQR)
     QEdata<-left_join(categories,QEdata,c('SpatialAssessmentUnit','Category'))
@@ -104,8 +102,9 @@ Assessment<- function(assessmentdata,summarylevel=1){
                           c("EQR"="EQR","SpatialAssessmentUnit"="SpatialAssessmentUnit"))
     OverallQE<-rename(OverallQE,Class=CategoryClass,Worst=Category)
 
-    QEspr<-inner_join(QEspr, OverallQE, c("SpatialAssessmentUnit"="SpatialAssessmentUnit"))
-
+    QEspr<-inner_join(QEspr, OverallQE, 'SpatialAssessmentUnit')
+    
+    
     for(j in 1:nextra){
       if(extracols[j]=='SpatialAssessmentUnit' & okextra[j]==0){
         #assessmentdata[[extracols[j]]]<-NULL
@@ -273,7 +272,6 @@ EQRStatus<-function(eqr){
   status<-ifelse(eqr<0.2, "Bad",status )
   return(status)
 }
-
 
 AddColours<-function(CRsum){
   co<-ifelse(CRsum>0.5, '#66FF66', '#3399FF')

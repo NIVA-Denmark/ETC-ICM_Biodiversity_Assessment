@@ -24,10 +24,10 @@ ui <- fluidPage(
             ul(
               li("Category"),
               li("Indicator"),
-              li("Bad"),
               li("Threshold"),
+              li("Status"),
               li("Reference"),
-              li("Status")
+              li("Bad")
             ),
             p("The following column is optional:"),
             ul(
@@ -35,34 +35,25 @@ ui <- fluidPage(
             ),
             p("The assesssment is made per Spatial Assessment Unit. If no Spatial Assessment Unit is specified, all indicators are combined in a single assessment."),
             p("See detailed instructions here:", HTML("<a href='data/ETC-ICM Biodiversity Assessment.pdf' target='_blank'>ETC-ICM Biodiversity Assessment.pdf</a>"))
-        )
+            )
         
-      })#,
+      })
       
-      # withTags({
-      #   div(class="header", checked=NA,
-      #       h4("More information"),
-      #       p("To find out more, contact ",
-      #         a(href="https://niva-denmark.dk/", "NIVA Denmark", target="_blank")),
-      #       a(href="https://niva-denmark.dk/",img(src="NIVA-Denmark-150.png", target="_blank"))
-      #   )
-      # })
-    ),
-    
-    mainPanel(
-      tabsetPanel(
-        tabPanel("Data", tableOutput("InDatatable")),
-        tabPanel("Categories",
-                 #downloadButton('downloadCategories', 'Download'),
-                 uiOutput("tab2"),
-                 uiOutput("Categories2")),
-        tabPanel("Assessment Units",
-                 #downloadButton('downloadAssessmentUnits', 'Download'),
-                 uiOutput("tab3"),
-                 uiOutput("AssessmentUnits"))
-        
-      ) # tabset panel
-    )
+  ),
+  
+  mainPanel(
+    tabsetPanel(
+      tabPanel("Data", tableOutput("InDatatable")),
+      tabPanel("Categories", 
+               uiOutput("Categories2")),  
+      tabPanel("Assessment Units", 
+               uiOutput("AssessmentUnits")),
+      tabPanel("Download",
+               downloadButton('downloadCategories', 'Download Category Results'),
+               downloadButton('downloadAssessmentUnits', 'Download Assessment Unit Results')
+      )
+    ) # tabset panel
+  )
   )  
   
 ) #fluid page
@@ -91,13 +82,16 @@ server <- function(input, output, session) {
       # User has not uploaded a file yet
       return(NULL)
     }
-
+    
+    #sepchar<-","
+    #if(input$sepname=="Semi-colon"){sepchar<-";"}
+    #if(input$sepname=="Tab"){sepchar<-"\t"}
     
     dfencode<-guess_encoding(infile$datapath,n_max=-1)
     cat(paste0(dfencode$encoding[1],"\n"))
     filedata<-read.table(infile$datapath, sep=sepchar(),
                          encoding=dfencode$encoding[1], header=T, stringsAsFactors=F)
-    
+
     return(filedata)
   })
   
@@ -127,9 +121,43 @@ server <- function(input, output, session) {
   })
   
   
-  output$InDatatable <- renderTable({return(InData())},na="")
-  output$Categories<- renderTable({return(Categories())},na="",digits=3)
-  output$AssessmentUnits<- renderTable({return(AssessmentUnits())},na="",digits=3)
+  CHASEplot<- reactive({
+    QE<-QEdata()
+    
+    ymax=max(QE$ConSum,na.rm=TRUE)
+    ymax=ceiling(ymax)
+    if(ymax>5 & ymax<10){ymax=10}
+    if(ymax>1 & ymax<5){ymax=5}
+    
+    if (is.null(QE)){return(NULL)}
+    
+    levels<-data_frame(factor(c("High","Good","Moderate","Poor","Bad"),
+                              levels=c("High","Good","Moderate","Poor","Bad")),
+                       c(0.0,0.5,1,5,10),
+                       c(0.5,1,5,10,ymax))
+    names(levels)[1] <- 'Status'
+    names(levels)[2] <- 'ymin'
+    names(levels)[3] <- 'ymax'
+    
+    levels2<-levels
+    levels$x<-0.5
+    levels2$x<-0.5+max(as.numeric(QE$Waterbody))
+    
+    levels<-rbind(levels, levels2)
+    
+    levels<-levels[levels$ymin<=ymax,]
+    ymax2=max(levels$ymax,na.rm=TRUE)
+    levels[levels$ymax==ymax2,]$ymax<-ymax    
+    Palette1=c("#3399FF", "#66FF66", "#FFFF66","#FF9933","#FF6600" )
+    
+    p<-ggplot(data=QE,x=Waterbody,y=ConSum) + theme_bw() +
+      geom_point(size=5,data=QE, aes(x=factor(Waterbody), y=ConSum,shape=Matrix, ymin=0)) +
+      geom_ribbon(data=levels,aes(x=x,ymin=ymin,ymax=ymax,fill=Status),alpha=0.5) +
+      geom_point(size=5,data=QE, aes(x=factor(Waterbody), y=ConSum,shape=Matrix, ymin=0)) +
+      scale_fill_manual(name="Status", values=Palette1)+
+      xlab('Waterbody')+ylab('Contamination Sum')
+    return(p)
+  })
   
   output$downloadAssessmentUnits <- downloadHandler(
     filename = function() { paste0('Results Assessment Units.csv') },
@@ -142,17 +170,14 @@ server <- function(input, output, session) {
       write.table(Categories(), file, sep=sepchar(),row.names=F,na="")
     })
   
-  output$tab2 <- renderUI({
-    if(is.null(filedata())){NULL}
-    else{downloadButton('downloadCategories', 'Download')}
-  })
-  output$tab3 <- renderUI({
-    if(is.null(filedata())){NULL}
-    else{downloadButton('downloadAssessmentUnits', 'Download')}
-  })
   
+  output$InDatatable <- renderTable({return(InData())},na="")
+  output$Indicators<- renderTable({return(Indicators())},na="")
+  output$Categories<- renderTable({return(Categories())},na="")
+  output$AssessmentUnits<- renderTable({return(AssessmentUnits())},na="")
   
-  
+  output$plot <- renderPlot({return(CHASEplot())})
+  output$QEtable <- renderTable({return(QEspr())})
   output$Categories2 <- renderUI({
     list(
       tags$head(tags$script(HTML('Shiny.addCustomMessageHandler("jsCode", function(message) { eval(message.value); });')))
