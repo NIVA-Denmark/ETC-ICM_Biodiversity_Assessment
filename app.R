@@ -13,8 +13,8 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
       fileInput('datafile', 'Choose input file'),
-      #selectInput('sepname','Column Separator:',c("Comma","Semi-colon","Tab")),
-      selectInput('sepname','Column Separator:',c("Semi-colon","Comma","Tab")),
+      selectInput('sepname','Column Separator:',c("Comma","Semi-colon","Tab")),
+      #selectInput('sepname','Column Separator:',c("Semi-colon","Comma","Tab")),
       withTags({
         div(class="header", checked=NA,
             h4("Instructions"),
@@ -89,9 +89,11 @@ server <- function(input, output, session) {
     
     dfencode<-guess_encoding(infile$datapath,n_max=-1)
     cat(paste0(dfencode$encoding[1],"\n"))
-    filedata<-read.table(infile$datapath, sep=sepchar(),
-                         encoding=dfencode$encoding[1], header=T, stringsAsFactors=F)
-
+    # filedata<-read.table(infile$datapath, sep=sepchar(),
+    #                      header=T, stringsAsFactors=F)
+     filedata<-read.table(infile$datapath, sep=sepchar(),
+                          encoding=dfencode$encoding[1], header=T, stringsAsFactors=F)
+    
     return(filedata)
   })
   
