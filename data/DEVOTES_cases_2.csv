@@ -1,0 +1,145 @@
+SpatialAssessmentUnit;Category;Indicator;Unit;Bad;Threshold;Reference;Status
+1.01 norwegian BARENTS SEA - LOFOTEN;Fish;Gadus morhua SSB (COD in Subareas I and II);t;0;460000;3230000;660000
+1.01 norwegian BARENTS SEA - LOFOTEN;Fish;Hippoglosoides platessoides 0-group abundance (Long rough dab - 0-group - Abundance indices);index value;0;54;1315;328
+1.01 norwegian BARENTS SEA - LOFOTEN;Fish;Melanogrammus aeglefinus SSB (HADDOCK in Subareas I and II);t;0;80000;607000;195000
+1.03 Fjords & Coast (ice-free zone);Fish;coastal Gadus morhua SSB (NORWEGAIN COASTAL WATER COD in Subareas I and II);;0;60000;90000;19000
+1.01 norwegian BARENTS SEA - LOFOTEN;Fish;Mallottus villosus SSB (CAPELIN in Subareas I and II, excluding Division IIa west of 5°W);t;0;200000;5805000;1297000
+1.01 norwegian BARENTS SEA - LOFOTEN;Fish;Clupea harengus SSB (HERRING in Subareas I, II, and V, and in Divisions IVa and XIVa);t;0;5000000;11826000;5709000
+1.01 norwegian BARENTS SEA - LOFOTEN;Fish;Micromesistius poutassou SSB (BLUE WHITING in Subareas I–IX, XII, and XIV);t;0;2250000;10783500;5070000
+1.01 norwegian BARENTS SEA - LOFOTEN;Fish;Boreogadus saida total stock Biomass (ARCTIC COD after data in Hop & Gjaeseter, 2013);t;0;250000;3000000;1500000
+1.01 norwegian BARENTS SEA - LOFOTEN;Fish;Balaenoptera acutorostrata Abundance level in the Barents Sea compared to 1989-1995 period ;indiv.;0;71000;168000;80000
+1.01 norwegian BARENTS SEA - LOFOTEN;Fish;"Pagophilus groenlandicus stock size (HARP SEAL from Greenland area + White Sea/Barents Sea area; ICES data)";indiv.;0;690000;3900000;1916000
+1.01 norwegian BARENTS SEA - LOFOTEN;Mammals;Proportion of non-threatened Cetacean species (from Norwegian Red list);%;0;75;100;75
+1.09 seasonnal-ice zone;Mammals;Proportion of non-threatened pagophiletic Mammals;%;0;75;100;45
+1.03 Fjords & Coast (ice-free zone);Mammals;Proportion of non-threatened coastal mammal species (3 species);%;0;99;100;66
+1.10 Fjord & Coast (seasonnal-ice zone);Mammals;Proportion of non-threatened coastal mammal species (3 species);%;0;99;100;66
+1.01 norwegian BARENTS SEA - LOFOTEN;Fish;Proportion of non-threatened Fish species (according to Norwegian red list);%;0;99;100;92.3
+1.01 norwegian BARENTS SEA - LOFOTEN;Birds;Uria lomvia Population trend over last 5 yr;%;-100;-20;100;-28
+1.01 norwegian BARENTS SEA - LOFOTEN;Birds;Uria lomvia Breeding success over last 3 yr;;0;0.6;1;0.6
+1.01 norwegian BARENTS SEA - LOFOTEN;Birds;Uria aalge Population trend over last 5 yr;%;-100;-20;100;-15
+1.01 norwegian BARENTS SEA - LOFOTEN;Birds;Rissa tridactyla Population trend over last 5 yr;%;-100;-20;100;-23
+1.02 ice-free zone;Birds;Rissa tridactyla Breeding success over last 5 yr;[nest-leaving chicks/pair]-ratio;0;0.5;1;0.42
+1.01 norwegian BARENTS SEA - LOFOTEN;Birds;Fratercula arctica Population trend over last 5 yr;%;-100;-20;100;-15
+1.01 norwegian BARENTS SEA - LOFOTEN;Birds;Abundance of Alle alle at sea (Little auk, sighting data);% of BASELINE;0;80;130;134
+1.01 norwegian BARENTS SEA - LOFOTEN;Birds;Abundance of Fulmarus glacialis at sea (Northern fulmar, sighting data);% of BASELINE;0;80;130;74
+1.01 norwegian BARENTS SEA - LOFOTEN;Birds;Abundance of Rissa tridactyla at sea (black-legged kittiwake, sighting data);% of BASELINE;0;70;130;111
+1.01 norwegian BARENTS SEA - LOFOTEN;Birds;Abundance of Uria lomvia at sea (polar guillemot, sighting data);% of BASELINE;0;80;130;105
+1.01 norwegian BARENTS SEA - LOFOTEN;Birds;Abundance of Uria aalge at sea (common guillemot, sighting data);% of BASELINE;0;80;130;107
+1.01 norwegian BARENTS SEA - LOFOTEN;Birds;Abundance of Fratercula arctica at sea (atlantic puffin, sighting data);% of BASELINE;0;80;130;110
+1.01 norwegian BARENTS SEA - LOFOTEN;Birds;Proportion of non-threatened Pelagos-feeding seabird species;%;0;75;100;55
+1.01 norwegian BARENTS SEA - LOFOTEN;Birds;Proportion of non-threatened Benthos-feeding seabird species;%;0;75;100;65
+1.01 norwegian BARENTS SEA - LOFOTEN;Pelagic habitats;Biomass of zooplankton [>2 mm];% deviation from BASELINE;100;25;0;27
+1.01 norwegian BARENTS SEA - LOFOTEN;Pelagic habitats;Biomass of zooplankton [1 mm-2 mm];% deviation from BASELINE;100;25;0;17
+1.01 norwegian BARENTS SEA - LOFOTEN;Pelagic habitats;Biomass of zooplankton [0.18 mm-1 mm];% deviation from BASELINE;100;25;0;14
+1.01 norwegian BARENTS SEA - LOFOTEN;Pelagic habitats;Abundance level of Calanus finmarchicus;z score;5;2;0;0.2
+1.06 Nordland fjords;Plants;Kelp forest extent;% regrowth;0;75;100;44
+1.05 Troms fjords;Plants;Kelp forest extent;% regrowth;0;75;100;45
+1.04 Finnmark fjords;Plants;Kelp forest extent;% regrowth;0;75;100;46
+1.01 norwegian BARENTS SEA - LOFOTEN;Benthic habitats;Stock of Pandalus borealis (NORTHERN SHRIMP IN THE BARENTS SEA (ICES SUB-AREAS I AND II));proportion of BMSY;0;1;2;1.8
+1.04 Finnmark fjords;Benthic habitats;AMBI;biotic inde;6;2.8;1;2.1
+1.06 Nordland fjords;Benthic habitats;AMBI;biotic inde;6;2.8;1;3.1
+1.05 Troms fjords;Benthic habitats;AMBI;biotic inde;6;2.8;1;2.7
+1.06 Nordland fjords;Benthic habitats;AMBI;biotic inde;6;2.7;1;2.1
+1.05 Troms fjords;Benthic habitats;AMBI;biotic inde;6;2.7;1;1.6
+1.04 Finnmark fjords;Benthic habitats;AMBI;biotic inde;6;2.7;1;2
+1.11 Svalbard fjords;Benthic habitats;AMBI;biotic inde;6;3.9;1;2.8
+1.08 Offshore (ice-free zone);Benthic habitats;AMBI;biotic inde;6;2;1;1.5
+1.10 Fjord & Coast (seasonnal-ice zone);Benthic habitats;AMBI;biotic inde;6;2.8;1;1.9
+1.04 Finnmark fjords;Benthic habitats;ES100;ES(100);0;17;60;30
+1.06 Nordland fjords;Benthic habitats;ES100;ES(100);0;17;60;24
+1.05 Troms fjords;Benthic habitats;ES100;ES(100);0;17;60;27
+1.06 Nordland fjords;Benthic habitats;ES100;ES(100);0;19;45;24
+1.05 Troms fjords;Benthic habitats;ES100;ES(100);0;19;45;33
+1.04 Finnmark fjords;Benthic habitats;ES100;ES(100);0;19;45;25
+1.11 Svalbard fjords;Benthic habitats;ES100;ES(100);0;13;35;19
+1.08 Offshore (ice-free zone);Benthic habitats;ES100;ES(100);0;34;60;42
+1.10 Fjord & Coast (seasonnal-ice zone);Benthic habitats;ES100;ES(100);0;17;60;45
+1.04 Finnmark fjords;Benthic habitats;evenness [macrofauna];1-lambaprime;0;0.72;1;0.83
+1.06 Nordland fjords;Benthic habitats;evenness [macrofauna];1-lambaprime;0;0.72;1;0.76
+1.05 Troms fjords;Benthic habitats;evenness [macrofauna];1-lambaprime;0;0.72;1;0.82
+1.06 Nordland fjords;Benthic habitats;evenness [macrofauna];1-lambaprime;0;0.71;1;0.83
+1.05 Troms fjords;Benthic habitats;evenness [macrofauna];1-lambaprime;0;0.71;1;0.93
+1.04 Finnmark fjords;Benthic habitats;evenness [macrofauna];1-lambaprime;0;0.71;1;0.81
+1.11 Svalbard fjords;Benthic habitats;evenness [macrofauna];1-lambaprime;0;0.67;1;0.82
+1.08 Offshore (ice-free zone);Benthic habitats;evenness [macrofauna];1-lambaprime;0;0.92;1;0.94
+1.10 Fjord & Coast (seasonnal-ice zone);Benthic habitats;evenness [macrofauna];1-lambaprime;0;0.72;1;0.92
+2.04 0-25 m;Benthic habitats;M-AMBI;;0;0.53;1.1;0.906053571
+2.05 25-50 m;Benthic habitats;M-AMBI;;0;0.53;1.2;0.94
+2.06 50-100 m;Benthic habitats;M-AMBI;;0;0.53;1.15;0.832303134
+2.07 100-150 m;Benthic habitats;M-AMBI;;0;0.53;1;0.8154625
+2.08 150-200 m;Benthic habitats;M-AMBI;;0;0.53;1;0.672624
+2.02 Offshore waters (>200 m depth);Benthic habitats;M-AMBI;;0;0.53;1;0.712135
+2.04 0-25 m;Benthic habitats;AMBI;;7;3.3;0;1.361857143
+2.05 25-50 m;Benthic habitats;AMBI;;7;3.3;0;1.2023
+2.06 50-100 m;Benthic habitats;AMBI;;7;3.3;0;1.77
+2.07 100-150 m;Benthic habitats;AMBI;;7;3.3;0;1.798931818
+2.08 150-200 m;Benthic habitats;AMBI;;7;3.3;0;1.696666667
+2.02 Offshore waters (>200 m depth);Benthic habitats;AMBI;;7;3.3;0;2.13
+2.05 25-50 m;Pelagic habitats;Blooms of any phytoplankton taxa;%;100;39;0;18.23
+2.07 100-150 m;Pelagic habitats;Blooms of any phytoplankton taxa;%;100;39;0;11.11
+2.04 0-25 m;Pelagic habitats;Biological value Zooplankton;;1;2.5;5;4.5
+2.05 25-50 m;Pelagic habitats;Biological value Zooplankton;;1;2.5;5;4.5
+2.06 50-100 m;Pelagic habitats;Biological value Zooplankton;;1;2.5;5;4.4
+2.07 100-150 m;Pelagic habitats;Biological value Zooplankton;;1;2.5;5;4.33
+2.08 150-200 m;Pelagic habitats;Biological value Zooplankton;;1;2.5;5;4.5
+2.04 0-25 m;Plants;Biological value Macroalgae;;1;2.5;5;3.37
+2.05 25-50 m;Plants;Biological value Macroalgae;;1;2.5;5;3.36
+2.04 0-25 m;Benthic habitats;Biological value Macroinvertebrates;;1;2.5;5;3.73
+2.05 25-50 m;Benthic habitats;Biological value Macroinvertebrates;;1;2.5;5;3.46
+2.06 50-100 m;Benthic habitats;Biological value Macroinvertebrates;;1;2.5;5;3.42
+2.07 100-150 m;Benthic habitats;Biological value Macroinvertebrates;;1;2.5;5;3.47
+2.08 150-200 m;Benthic habitats;Biological value Macroinvertebrates;;1;2.5;5;3.21
+2.04 0-25 m;Fish;Biological value Demersal Fish;;1;2.5;5;2.79
+2.05 25-50 m;Fish;Biological value Demersal Fish;;1;2.5;5;3.8
+2.06 50-100 m;Fish;Biological value Demersal Fish;;1;2.5;5;3.71
+2.07 100-150 m;Fish;Biological value Demersal Fish;;1;2.5;5;3.88
+2.08 150-200 m;Fish;Biological value Demersal Fish;;1;2.5;5;4.29
+2.02 Offshore waters (>200 m depth);Fish;Biological value Demersal Fish;;1;2.5;5;3.5
+2.04 0-25 m;Birds;Biological value Seabirds;;1;2.5;5;3.83
+2.05 25-50 m;Birds;Biological value Seabirds;;1;2.5;5;3.71
+2.06 50-100 m;Birds;Biological value Seabirds;;1;2.5;5;2.62
+2.07 100-150 m;Birds;Biological value Seabirds;;1;2.5;5;1.25
+2.08 150-200 m;Birds;Biological value Seabirds;;1;2.5;5;1
+2.02 Offshore waters (>200 m depth);Birds;Biological value Seabirds;;1;2.5;5;4.22
+2.04 0-25 m;Mammals;Biological value Mammals;;1;2.5;5;1.48
+2.05 25-50 m;Mammals;Biological value Mammals;;1;2.5;5;2.52
+2.06 50-100 m;Mammals;Biological value Mammals;;1;2.5;5;2.14
+2.07 100-150 m;Mammals;Biological value Mammals;;1;2.5;5;2.38
+2.08 150-200 m;Mammals;Biological value Mammals;;1;2.5;5;2.25
+2.02 Offshore waters (>200 m depth);Mammals;Biological value Mammals;;1;2.5;5;1.63
+2.01 Basque EEZ;Fish;Catch-biomass ratio Engraulis;;1;0.3;0;0.120324902
+2.01 Basque EEZ;Fish;Fishing mortality L. budegassa (VIIIC & Ixa);;3;1;0;0.6225
+2.01 Basque EEZ;Fish;Fishing mortality L. piscatorius;;1;0.19;0;0.1875
+2.01 Basque EEZ;Fish;Fishing mortality L. boscii (8c9a);;1;0.17;0;0.26725
+2.01 Basque EEZ;Fish;Fishing mortality L. whiffiagonis (8c9a);;1;0.17;0;0.15
+2.01 Basque EEZ;Fish;Fishing mortality Merluccius BoB+North;;1;0.27;0;0.375
+2.01 Basque EEZ;Fish;Fishing Mortality Merluccius  Iberian Waters;;1;0.24;0;0.707
+2.01 Basque EEZ;Fish;Fishing mortality Sardine VIIIc+Ixa;;1;0.27;0;0.5575
+2.01 Basque EEZ;Fish;Fishing mortality Trachurus;;1;0.13;0;0.149
+2.01 Basque EEZ;Fish;Fishing mortality Scomber (NEAM);;1;0.22;0;0.21725
+2.01 Basque EEZ;Fish;Fishing mortality Micromesistius (I-IX);;1;0.3;0;0.1215
+2.01 Basque EEZ;Fish;Fishing mortality T. alalunga;;1;0.1486;0;0.078874735
+2.01 Basque EEZ;Fish;Fishing mortality T. thynnus;;1;0.3025;0;0.108
+2.01 Basque EEZ;Fish;Fish larger than mean size 1st sexual maturation Engraulis;%;0;50;100;99.99
+2.01 Basque EEZ;Fish;Fish larger than mean size 1st sexual maturation L. budegassa;%;0;50;100;46.44
+2.01 Basque EEZ;Fish;Fish larger than mean size 1st sexual maturation L. piscatorius;%;0;50;100;55.5
+2.01 Basque EEZ;Fish;Fish larger than mean size 1st sexual maturation L. boscii;%;0;50;100;99.88
+2.01 Basque EEZ;Fish;Fish larger than mean size 1st sexual maturation L. whiffiagonis;%;0;50;100;42.84
+2.01 Basque EEZ;Fish;Fish larger than mean size 1st sexual maturation Merluccius;%;0;50;100;16.68
+2.01 Basque EEZ;Fish;Fish larger than mean size 1st sexual maturation Trachurus;%;0;50;100;43.8
+2.01 Basque EEZ;Fish;Fish larger than mean size 1st sexual maturation Scomber;%;0;50;100;75.4
+2.01 Basque EEZ;Fish;Fish larger than mean size 1st sexual maturation Micromesistius;%;0;50;100;98.25
+2.01 Basque EEZ;Fish;Spawning-stock biomass L. budegassa BoBiscay;t;0;1;3;0.815
+2.01 Basque EEZ;Fish;Spawning-stock biomass L. piscatorius BoBiscay;t;0;9000;16500;6510.75
+2.01 Basque EEZ;Fish;Spawning-stock biomass L. boscii (8c9a);t;0;5333.666667;6801;6015
+2.01 Basque EEZ;Fish;Spawning-stock biomass L. whiffiagonis (8c9a);t;0;1440;2500;1253
+2.01 Basque EEZ;Fish;Spawning-stock biomass Sardine VIIIc-Ixa;t;0;551266.6667;917000;159000
+2.01 Basque EEZ;Fish;Spawning-stock biomass Trachurus;t;0;1889.733333;4400;1008.75
+2.01 Basque EEZ;Fish;Spawning-stock biomass Scomber (NEAM);t^10;0;3.36;5.36;4.2675
+2.01 Basque EEZ;Fish;Spawning-stock biomass Engraulis;t;0;63000;95000;80907.84506
+2.01 Basque EEZ;Fish;Spawning-stock biomass Merluccius BoBiscay+North;t;0;94133.33333;190000;167104.25
+2.01 Basque EEZ;Fish;Spawning-stock biomass Merluccius Iberian Waters;t;0;23666.66667;45800;16840
+2.01 Basque EEZ;Fish;Spawning-stock biomass Micromesistius;t;0;2250000;7189000;3740250
+2.01 Basque EEZ;Fish;Spawning-stock biomass T. alalunga (Natlantic stock);t;0;81110;241383.36;186629.8
+2.01 Basque EEZ;Fish;Spawning-stock biomass T. thynnus East Atlantic + Med);t;0;186435.627;333241;239373.6
+2.01 Basque EEZ;Fish;Proportion of fish larger than 1000 mm;%;0;15;30;13.07
