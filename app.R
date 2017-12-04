@@ -45,13 +45,12 @@ ui <- fluidPage(
     tabsetPanel(
       tabPanel("Data", tableOutput("InDatatable")),
       tabPanel("Categories", 
+               downloadButton('downloadCategories', 'Download Category Results'),
                uiOutput("Categories2")),  
       tabPanel("Assessment Units", 
-               uiOutput("AssessmentUnits")),
-      tabPanel("Download",
-               downloadButton('downloadCategories', 'Download Category Results'),
-               downloadButton('downloadAssessmentUnits', 'Download Assessment Unit Results')
-      )
+               downloadButton('downloadAssessmentUnits', 'Download Assessment Unit Results'),
+               uiOutput("AssessmentUnits"))
+      
     ) # tabset panel
   )
   )  
@@ -83,16 +82,11 @@ server <- function(input, output, session) {
       return(NULL)
     }
     
-    #sepchar<-","
-    #if(input$sepname=="Semi-colon"){sepchar<-";"}
-    #if(input$sepname=="Tab"){sepchar<-"\t"}
     
     dfencode<-guess_encoding(infile$datapath,n_max=-1)
     cat(paste0(dfencode$encoding[1],"\n"))
      filedata<-read.table(infile$datapath, sep=sepchar(),
-                          header=T, stringsAsFactors=F,encoding="UTF-8")
-     #filedata<-read.table(infile$datapath, sep=sepchar(),
-     #                     encoding=dfencode$encoding[1], header=T, stringsAsFactors=F)
+                          header=T, stringsAsFactors=F,encoding=dfencode$encoding[1])
     
     return(filedata)
   })
@@ -164,18 +158,18 @@ server <- function(input, output, session) {
   output$downloadAssessmentUnits <- downloadHandler(
     filename = function() { paste0('Results Assessment Units.csv') },
     content = function(file) {
-      write.table(AssessmentUnits(), file, sep=sepchar(),row.names=F,na="")
+      write.table(AssessmentUnits(), file, sep=sepchar(),row.names=F,na="", fileEncoding= "windows-1252")
     })
   output$downloadCategories <- downloadHandler(
     filename = function() { paste0('Results Categories.csv') },
     content = function(file) {
-      write.table(Categories(), file, sep=sepchar(),row.names=F,na="")
+      write.table(Categories(), file, sep=sepchar(),row.names=F,na="", fileEncoding= "windows-1252")
     })
   
   
   output$InDatatable <- renderTable({return(InData())},na="")
-  output$Indicators<- renderTable({return(Indicators())},na="")
-  output$Categories<- renderTable({return(Categories())},na="")
+  output$Indicators<- renderTable({return(Indicators())},na="",digits=3)
+  output$Categories<- renderTable({return(Categories())},na="",digits=3)
   output$AssessmentUnits<- renderTable({return(AssessmentUnits())},na="")
   
   output$plot <- renderPlot({return(CHASEplot())})
