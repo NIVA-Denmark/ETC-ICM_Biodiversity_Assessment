@@ -81,6 +81,19 @@ Assessment<- function(assessmentdata,summarylevel=1){
     names(categories)[1] <- 'SpatialAssessmentUnit'
     names(categories)[2] <- 'Category'
     
+    # Reorder assessment units
+
+    df<-as.data.frame(unique(assessmentdata$SpatialAssessmentUnit))
+    names(df)[1]<-"SpatialAssesmentUnit"
+    df$SpatialAssesmentUnit<-as.character(df$SpatialAssesmentUnit)
+    df$pos<-regexpr(" ",df$SpatialAssesmentUnit)
+    df$n1<-as.numeric(substr(df$SpatialAssesmentUnit, 1, df$pos-4))
+    df$n2<-as.numeric(substr(df$SpatialAssesmentUnit, df$pos-2, df$pos-1))
+    df<-arrange(df,n1,n2)
+    #df$SpatialAssesmentUnit
+
+    assessmentdata$SpatialAssessmentUnit<- factor(assessmentdata$SpatialAssessmentUnit, levels = df$SpatialAssesmentUnit)
+    
     
     #"Category","Indicator","Threshold","Status","Reference","Bad"
     
