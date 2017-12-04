@@ -1,10 +1,10 @@
 rm(list = ls())
 library(shiny)
-library(readr)
+#library(readr)
 library(ggplot2)
 source('assessment.R')
 source('javascript.R')
-
+source('read_encode.R')
 
 #== 'Moderate'
 ui <- fluidPage(
@@ -82,11 +82,7 @@ server <- function(input, output, session) {
       return(NULL)
     }
     
-    
-    dfencode<-guess_encoding(infile$datapath,n_max=-1)
-    cat(paste0(dfencode$encoding[1],"\n"))
-     filedata<-read.table(infile$datapath, sep=sepchar(),
-                          header=T, stringsAsFactors=F,encoding=dfencode$encoding[1])
+     filedata<-read_encode(infile$datapath, separator=sepchar())
     
     return(filedata)
   })
