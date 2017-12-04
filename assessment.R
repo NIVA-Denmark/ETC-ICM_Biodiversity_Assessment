@@ -62,8 +62,7 @@ Assessment<- function(assessmentdata,summarylevel=1){
       }
     }
     
-    #assessmentdata$Category<-gsub("(?<=\\b)([a-z])", "\\U\\1", tolower(assessmentdata$Category), perl=TRUE)
-    
+
     # Change order of category factors
     cat1<-data.frame(unique(assessmentdata$Category))
     names(cat1)[1] <- 'Category'

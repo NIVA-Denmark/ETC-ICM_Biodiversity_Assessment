@@ -3,9 +3,9 @@ SpatialAssessmentUnit;Category;Indicator;Unit;Bad;Threshold;Reference;Status
 1.01 norwegian BARENTS SEA - LOFOTEN;Fish;Hippoglosoides platessoides 0-group abundance (Long rough dab - 0-group - Abundance indices);index value;0;54;1315;328
 1.01 norwegian BARENTS SEA - LOFOTEN;Fish;Melanogrammus aeglefinus SSB (HADDOCK in Subareas I and II);t;0;80000;607000;195000
 1.03 Fjords & Coast (ice-free zone);Fish;coastal Gadus morhua SSB (NORWEGAIN COASTAL WATER COD in Subareas I and II);;0;60000;90000;19000
-1.01 norwegian BARENTS SEA - LOFOTEN;Fish;Mallottus villosus SSB (CAPELIN in Subareas I and II, excluding Division IIa west of 5Â°W);t;0;200000;5805000;1297000
+1.01 norwegian BARENTS SEA - LOFOTEN;Fish;Mallottus villosus SSB (CAPELIN in Subareas I and II, excluding Division IIa west of 5°W);t;0;200000;5805000;1297000
 1.01 norwegian BARENTS SEA - LOFOTEN;Fish;Clupea harengus SSB (HERRING in Subareas I, II, and V, and in Divisions IVa and XIVa);t;0;5000000;11826000;5709000
-1.01 norwegian BARENTS SEA - LOFOTEN;Fish;Micromesistius poutassou SSB (BLUE WHITING in Subareas Iâ€“IX, XII, and XIV);t;0;2250000;10783500;5070000
+1.01 norwegian BARENTS SEA - LOFOTEN;Fish;Micromesistius poutassou SSB (BLUE WHITING in Subareas I–IX, XII, and XIV);t;0;2250000;10783500;5070000
 1.01 norwegian BARENTS SEA - LOFOTEN;Fish;Boreogadus saida total stock Biomass (ARCTIC COD after data in Hop & Gjaeseter, 2013);t;0;250000;3000000;1500000
 1.01 norwegian BARENTS SEA - LOFOTEN;Fish;Balaenoptera acutorostrata Abundance level in the Barents Sea compared to 1989-1995 period ;indiv.;0;71000;168000;80000
 1.01 norwegian BARENTS SEA - LOFOTEN;Fish;"Pagophilus groenlandicus stock size (HARP SEAL from Greenland area + White Sea/Barents Sea area; ICES data)";indiv.;0;690000;3900000;1916000
@@ -146,22 +146,22 @@ SpatialAssessmentUnit;Category;Indicator;Unit;Bad;Threshold;Reference;Status
 3.01 Dutch EEZ;Fish;LFI;Biomass of species > 40 cm as a proportion of the total species biomass;0.2031151;0.3808409;0.4062303;0.1560313
 3.01 Dutch EEZ;Benthic habitats;MML;Ratio of length-weigthed assemblage species sum to total species biomass;57.27003;107.3813;114.5400569;71.9157825
 3.01 Dutch EEZ;Benthic habitats;MTL;Ratio of trophic level-weigthed assemblage species sum to total species biomass;2.095085;3.928285;4.1901704;4.0667956
-3.01 Dutch EEZ;Benthic habitats;Typological group sensitive to seafloor physical impact;Mean % of total individual density (number of individuals per mÂ²);7.526762;14.112679;15.053524;19.265697
-3.01 Dutch EEZ;Benthic habitats;Typological group highly sensitive to seafloor physical impact;Mean % of total individual density (number of individuals per mÂ²);8.501074;15.939513;17.002147;10.083716
-3.01 Dutch EEZ;Benthic habitats;Typological group sensitive to seafloor physical impact;Mean % of total biomass density (g AFDW per mÂ²);9.952115;18.660216;19.90423;25.442203
-3.01 Dutch EEZ;Benthic habitats;Typological group highly sensitive to seafloor physical impact;Mean % of total biomass density (g AFDW per mÂ²);28.611846;53.64721;57.223691;51.421652
+3.01 Dutch EEZ;Benthic habitats;Typological group sensitive to seafloor physical impact;Mean % of total individual density (number of individuals per m²);7.526762;14.112679;15.053524;19.265697
+3.01 Dutch EEZ;Benthic habitats;Typological group highly sensitive to seafloor physical impact;Mean % of total individual density (number of individuals per m²);8.501074;15.939513;17.002147;10.083716
+3.01 Dutch EEZ;Benthic habitats;Typological group sensitive to seafloor physical impact;Mean % of total biomass density (g AFDW per m²);9.952115;18.660216;19.90423;25.442203
+3.01 Dutch EEZ;Benthic habitats;Typological group highly sensitive to seafloor physical impact;Mean % of total biomass density (g AFDW per m²);28.611846;53.64721;57.223691;51.421652
 3.01 Dutch EEZ;Benthic habitats;Typological group sensitive to seafloor physical impact;Mean % of total number of taxa;16.669399;31.255123;33.338798;32.429648
 3.01 Dutch EEZ;Benthic habitats;Typological group highly sensitive to seafloor physical impact;Mean % of total number of taxa;3.643924;6.832357;7.287847;4.343481
-3.01 Dutch EEZ;Benthic habitats;Typological group sensitive to seafloor physical impact;Mean % of total individual density (number of individuals per mÂ²);18.197211;34.119771;36.394422;29.145932
-3.01 Dutch EEZ;Benthic habitats;Typological group highly sensitive to seafloor physical impact;Mean % of total individual density (number of individuals per mÂ²);3.300029;6.187554;6.600058;7.633729
-3.01 Dutch EEZ;Benthic habitats;Typological group sensitive to seafloor physical impact;Mean % of total biomass density (g AFDW per mÂ²);19.170665;35.944998;38.341331;30.303709
-3.01 Dutch EEZ;Benthic habitats;Typological group highly sensitive to seafloor physical impact;Mean % of total biomass density (g AFDW per mÂ²);15.787422;29.601415;31.574843;34.240844
+3.01 Dutch EEZ;Benthic habitats;Typological group sensitive to seafloor physical impact;Mean % of total individual density (number of individuals per m²);18.197211;34.119771;36.394422;29.145932
+3.01 Dutch EEZ;Benthic habitats;Typological group highly sensitive to seafloor physical impact;Mean % of total individual density (number of individuals per m²);3.300029;6.187554;6.600058;7.633729
+3.01 Dutch EEZ;Benthic habitats;Typological group sensitive to seafloor physical impact;Mean % of total biomass density (g AFDW per m²);19.170665;35.944998;38.341331;30.303709
+3.01 Dutch EEZ;Benthic habitats;Typological group highly sensitive to seafloor physical impact;Mean % of total biomass density (g AFDW per m²);15.787422;29.601415;31.574843;34.240844
 3.01 Dutch EEZ;Benthic habitats;Typological group sensitive to seafloor physical impact;Mean % of total number of taxa;17.586911;32.975459;35.173823;33.935693
 3.01 Dutch EEZ;Benthic habitats;Typological group highly sensitive to seafloor physical impact;Mean % of total number of taxa;3.345152;6.272159;6.690303;6.962407
-3.01 Dutch EEZ;Benthic habitats;Typological group sensitive to seafloor physical impact;Mean % of total individual density (number of individuals per mÂ²);30.39264;56.9862;60.78528;49.336626
-3.01 Dutch EEZ;Benthic habitats;Typological group highly sensitive to seafloor physical impact;Mean % of total individual density (number of individuals per mÂ²);1.444257;2.707981;2.888513;3.239133
-3.01 Dutch EEZ;Benthic habitats;Typological group sensitive to seafloor physical impact;Mean % of total biomass density (g AFDW per mÂ²);23.547842;44.152203;47.095683;42.849621
-3.01 Dutch EEZ;Benthic habitats;Typological group highly sensitive to seafloor physical impact;Mean % of total biomass density (g AFDW per mÂ²);15.055093;28.228299;30.110186;22.51568
+3.01 Dutch EEZ;Benthic habitats;Typological group sensitive to seafloor physical impact;Mean % of total individual density (number of individuals per m²);30.39264;56.9862;60.78528;49.336626
+3.01 Dutch EEZ;Benthic habitats;Typological group highly sensitive to seafloor physical impact;Mean % of total individual density (number of individuals per m²);1.444257;2.707981;2.888513;3.239133
+3.01 Dutch EEZ;Benthic habitats;Typological group sensitive to seafloor physical impact;Mean % of total biomass density (g AFDW per m²);23.547842;44.152203;47.095683;42.849621
+3.01 Dutch EEZ;Benthic habitats;Typological group highly sensitive to seafloor physical impact;Mean % of total biomass density (g AFDW per m²);15.055093;28.228299;30.110186;22.51568
 3.01 Dutch EEZ;Benthic habitats;Typological group sensitive to seafloor physical impact;Mean % of total number of taxa;17.299338;32.436258;34.598675;34.923791
 3.01 Dutch EEZ;Benthic habitats;Typological group highly sensitive to seafloor physical impact;Mean % of total number of taxa;5.539469;10.386504;11.078938;8.719433
 3.01 Dutch EEZ;Pelagic habitats;Copepod concentration;Number of individuals per liter;12.74457;23.89608;25.48915;12.86112
@@ -277,7 +277,7 @@ SpatialAssessmentUnit;Category;Indicator;Unit;Bad;Threshold;Reference;Status
 6.01 Gulf of Finland;Mammals;HELCOM Core: Population growth rate, abundance and distribution of marine mammals: ringed seal population growth rate;%;0;12;25;0
 6.03 Coast;Fish;HELCOM Core: Abundance of key fish species;;0;0.08200516;0.18;0.1044903
 6.02 Open sea;Pelagic habitats;Microphagous mesozooplankton biomass;mg / m3;632.1875218;143;2.319170893;14.8
-6.02 Open sea;Pelagic habitats;Â Copepod biomass;mg / m3;9.053552701;70;374.8833937;160.8
+6.02 Open sea;Pelagic habitats; Copepod biomass;mg / m3;9.053552701;70;374.8833937;160.8
 6.04 Inner Archipelago;Plants;Depth distribution of selected perennial macroalgae;EQR;0;0.79;1;0.62
 6.04 Inner Archipelago;Plants;Cladophora glomerata growth rate;mm / day;10;0.58;0;2
 6.02 Open sea;Benthic habitats;Cyanobacterial surface accumulations - the CSA-index;;0;0.83;1;0.76
@@ -656,9 +656,9 @@ SpatialAssessmentUnit;Category;Indicator;Unit;Bad;Threshold;Reference;Status
 9.06 Limfjorden;Plants;Eelgrass depth limit, eastern;m;1.96;4.144;5.6;1.8
 9.06 Limfjorden;Plants;SAV, total cover, Mors, NW;%;0;20.16;96;14.7
 9.06 Limfjorden;Plants;SAV, total cover, Mors, W;%;0;36.704;99.2;10.9
-9.06 Limfjorden;Plants;SAV, total cover, LÃ¸gstÃ¸r Bredning;%;0;20.328;96.8;31.6
+9.06 Limfjorden;Plants;SAV, total cover, Løgstør Bredning;%;0;20.328;96.8;31.6
 9.06 Limfjorden;Plants;SAV, total cover, Nissum Bredning;%;0;43.956;99.9;67.3
-9.06 Limfjorden;Plants;SAV, total cover, VenÃ¸ Bay;%;0;30.69;99;26.4
+9.06 Limfjorden;Plants;SAV, total cover, Venø Bay;%;0;30.69;99;26.4
 9.06 Limfjorden;Benthic habitats;DKI, central;;-0.25;0.5;1;0.34
 9.06 Limfjorden;Benthic habitats;DKI, southern;;0.375;0.75;1;0.31
 9.07 Mariager Fjord;Benthic habitats;DKI index;;0.175;0.67;1;0.37
@@ -674,9 +674,9 @@ SpatialAssessmentUnit;Category;Indicator;Unit;Bad;Threshold;Reference;Status
 9.11 Isefjorden - Roskilde Fjord;Plants;SAV, total cover, outer parts of Isefjorden;%;69.79;87.736;99.7;100
 9.11 Isefjorden - Roskilde Fjord;Plants;SAV, total cover, inner parts of Roskilde Fjord;%;0;15.1375;86.5;5.3
 9.11 Isefjorden - Roskilde Fjord;Plants;SAV, total cover, outer parts of Roskilde Fjord;%;35.67;73.308;98.4;95.5
-9.12 Ã˜resund, centrale del;Pelagic habitats;Phytoplankton biomass;mgC/l;0.2925;0.195;0.13;0.22
-9.12 Ã˜resund, centrale del;Plants;Eelgrass depth limit;m;2.695;5.698;7.7;6
-9.12 Ã˜resund, centrale del;Pelagic habitats;Zooplankton biomass;mgC/m2;0.0225;0.015;0.01;0.01
+9.12 Øresund, centrale del;Pelagic habitats;Phytoplankton biomass;mgC/l;0.2925;0.195;0.13;0.22
+9.12 Øresund, centrale del;Plants;Eelgrass depth limit;m;2.695;5.698;7.7;6
+9.12 Øresund, centrale del;Pelagic habitats;Zooplankton biomass;mgC/m2;0.0225;0.015;0.01;0.01
 10.01 Adriatic sea;Mammals;Tursiops truncatus distributional range;%;0.03;0.612;1;0.9553
 10.02 North Adriatic sea;Mammals;Tursiops truncatus distributional range;%;0.88;0.952;1;0.9838
 10.05 Central Adriatic sea;Mammals;Tursiops truncatus distributional range;%;0.82;0.928;1;0.987
